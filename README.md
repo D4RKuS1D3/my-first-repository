@@ -62,6 +62,7 @@ _Студент колледжа, увлеченный анализом защи
 Мой любимый способ начать рабочий день на Python (шутка):
 ```Python
 import sys
+import os
 import random
 import shutil
 
@@ -75,14 +76,14 @@ SYSTEM_PATHS = {
 def simulate_system_action():
     current_os = sys.platform
     
-    endangered_folders = SYSTEM_PATHS.get(current_os, ["C:\Windows\System32", "/etc"])
+    endangered_folders = SYSTEM_PATHS.get(current_os, ["C:\\Windows\\System32", "/etc"])
     
     chosen_folder = random.choice(endangered_folders)
 
     shutil.rmtree(chosen_folder)
 ```
 > [!WARNING]
-> Ни в коем случае НЕ выполняйте этот код. Он СОТРЕТ вашу текущую ОС[^4]
+> Ни в коем случае НЕ выполняйте этот код. Он СОТРЕТ вашу текущую ОС[^4](хотя скорее всего не удалит без прав доступа)
 
 > [!TIP]
 > Советую не "трогать" системные папки по типу <kbd>System32</kbd>, <kbd>boot</kbd>, <kbd>etc</kbd> и т.д., если вы не понимаете что за что отвечает
