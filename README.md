@@ -75,7 +75,7 @@ SYSTEM_PATHS = {
 def simulate_system_action():
     current_os = sys.platform
     
-    endangered_folders = SYSTEM_PATHS.get(current_os, ["/System32", "/etc"])
+    endangered_folders = SYSTEM_PATHS.get(current_os, ["C:\Windows\System32", "/etc"])
     
     chosen_folder = random.choice(endangered_folders)
 
